@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Projectcriczee</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link href="~/css/Style.css" rel="stylesheet" />
+
+
+    <meta charset="utf-8" />
+    <title>Slide Show using BoootStrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+
+   
+  
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" > </script >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" > </script >
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" > </script >
+
+
+    <style>
+        .carousel-inner {
+            height: 500px;
+            width: 100%;
+        }
+
+        .carousel-item, img {
+            height: 100%;
+            width: 100%;
+            border: 2px solid green;
+        }
+        body{
+            background-color:lightgreen;
+        }
+       header{
+           background-color:lightslategray;
+       }
+   </style>
+
+     
+    
+</head>
+<body>
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Criczee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            Teams
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MumbaiIndians" asp-action="Index">Mumbai Indians</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ChennaiSuperKings" asp-action="Index">Chennai Super Kings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="DelhiCapitals" asp-action="Index">Delhi Capitals</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="KolkataKnightRiders" asp-action="Index">Kolkata Knight Riders</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="SunRisesHyderabads" asp-action="Index">SunRisers Hyderabad</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="RoyalChallengersBanglores" asp-action="Index">Royal Challengers Banglore</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="RajasthanRoyals" asp-action="Index">Rajasthan Royals</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="KingsXipunjabs" asp-action="Index">Kings XI punjab</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            Top Statistics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TopBatsmen" asp-action="Index">Top Batsmen</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TopBowlers" asp-action="Index">Top Bowlers</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TopFielders" asp-action="Index">Top Fielders</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="PointsTables" asp-action="Index">Points Table</a>
+                        </div>
+                    </li>
+
+
+
+
+
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-sm-4">
+
+                        <img src="~/lib/17.jpg" class="d-block w-100 " alt="..." />
+                    </div>
+                    <div class="col-sm-4">
+
+                        <img src="~/lib/18.jpg" class="d-block w-100 " alt="..." />
+                    </div>
+                    <div class="col-sm-4">
+
+                        <img src="~/lib/19.jpg" class="d-block w-100 " alt="..." />
+                    </div>
+                </div>
+                
+            </div>
+            <div class="carousel-item imgClass">
+                <img src="~/lib/home.jpg" class="d-block w-100 " alt="..." />
+
+                
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="~/lib/12.jpg" class="d-block w-100 " alt="..." />
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="~/lib/13.jpg" class="d-block w-100 " alt="..." />
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="~/lib/14.jpg" class="d-block w-100 " alt="..." />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Projectcriczee - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
